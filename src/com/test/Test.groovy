@@ -5,7 +5,8 @@ class Test implements Serializable {
 		jenkins.echo "Hi"
 		jenkins.echo jenkins.getClass().toString()
 		def methods = jenkins.getClass().declaredMethods.collect { it.name }
-		jenkins.command(cmd:"""echo Hi""", returnStdout:true)
+		def output = jenkins.command(cmd:"""echo Hi""", returnStdout:true)
+		echo output.toString()
 		jenkins.echo methods.toString()
 	}
 
