@@ -4,7 +4,7 @@ class Test implements Serializable {
 	Test(jenkins){
 		jenkins.echo "Hi"
 		jenkins.echo jenkins.getClass().toString()
-		def methods = jenkins.getClass().declaredMethods.findAll { !it.synthetic }.name
+		def methods = jenkins.getClass().declaredMethods.findAll {}.name
 		jenkins.echo methods.toString()
 	}
 
