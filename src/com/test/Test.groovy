@@ -5,7 +5,7 @@ class Test implements Serializable {
 		jenkins.echo "Hi"
 		jenkins.echo jenkins.getClass().toString()
 		String cmd = """echo command triggered"""
-		def output = jenkins.command(cmd true, '#/bin/bash +x')
+		def output = jenkins.command(cmd, true, '#/bin/bash +x')
 		jenkins.echo $output
 		jenkins.echo "Hello world"
 	}
