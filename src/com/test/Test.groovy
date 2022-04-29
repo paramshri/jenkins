@@ -4,6 +4,7 @@ class Test implements Serializable {
 	Test(jenkins){
 		jenkins.echo "Hi"
 		jenkins.echo jenkins.getClass().toString()
+		jenkins.command("echo command triggered")
 		jenkins.echo "Hello world"
 	}
 
